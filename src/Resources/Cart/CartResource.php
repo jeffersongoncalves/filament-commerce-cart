@@ -2,8 +2,8 @@
 
 namespace JeffersonGoncalves\FilamentCommerce\Cart\Resources\Cart;
 
+use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Schemas\Schema;
 use Filament\Tables\Table;
 use JeffersonGoncalves\Commerce\Cart\Models\Cart;
 use JeffersonGoncalves\FilamentCommerce\Cart\CommerceCartPlugin;
@@ -26,9 +26,9 @@ class CartResource extends Resource
         }
     }
 
-    public static function form(Schema $schema): Schema
+    public static function form(Form $form): Form
     {
-        return CartForm::configure($schema);
+        return CartForm::configure($form);
     }
 
     public static function table(Table $table): Table
